@@ -187,6 +187,10 @@ on enable-low-power
     write /dev/cpuset/system-background/cpus 2-5
     write /dev/cpuset/restricted/cpus 2-5
 
+    # Enable idle state listener
+    write /sys/class/drm/card0/device/idle_encoder_mask 1
+    write /sys/class/drm/card0/device/idle_timeout_ms 100
+
     # Turn on sleep modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
