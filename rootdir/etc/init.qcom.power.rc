@@ -62,6 +62,10 @@ on init
     write /sys/block/sde/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/nr_requests 256
 
+    # Report max frequency to unity tasks
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
 on boot
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
