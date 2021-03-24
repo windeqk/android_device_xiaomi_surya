@@ -1,0 +1,16 @@
+allow hal_fingerprint_default {
+  tee_device
+  fingerprint_device
+}: chr_file ioctl;
+
+allow hal_fingerprint_default {
+  input_device
+  vendor_sysfs_graphics
+}: dir r_dir_perms;
+
+allow hal_fingerprint_default {
+  vendor_sysfs_fingerprint
+  vendor_sysfs_graphics
+}: file rw_file_perms;
+
+get_prop(system_server, vendor_fp_prop);

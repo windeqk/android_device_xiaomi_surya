@@ -1,5 +1,10 @@
 # Battery secret
 /vendor/bin/batterysecret                                         u:object_r:batterysecret_exec:s0
 
+# Fingerprint
+/sys/devices/soc/soc:fpc1020.*/irq                                u:object_r:fingerprint_device:s0
+/sys/devices/soc/soc:fpc1020.*/hw_reset                           u:object_r:fingerprint_device:s0
+/sys/devices/soc/soc:fpc1020.*/wakeup_enable                      u:object_r:fingerprint_device:s0
+
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                  u:object_r:persist_subsys_file:s0
