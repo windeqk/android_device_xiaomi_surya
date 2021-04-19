@@ -203,6 +203,9 @@ on enable-low-power
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/iostats 1
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
     # Post-setup services
     setprop vendor.post_boot.parsed 1
 
