@@ -2,4 +2,16 @@ type xiaomidirac_app, domain;
 
 app_domain(xiaomidirac_app)
 
-allow xiaomidirac_app audioserver_service:service_manager find;
+allow xiaomidirac_app {
+    activity_service
+    activity_task_service
+    audioserver_service
+    autofill_service
+    gpu_service
+    surfaceflinger_service
+}:service_manager find;
+
+allow xiaomidirac_app system_app_data_file:dir create_dir_perms;
+allow xiaomidirac_app system_app_data_file:{ file lnk_file } create_file_perms;
+
+binder_call(xiaomidirac_app, gpuservice)
