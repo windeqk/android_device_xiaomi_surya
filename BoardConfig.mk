@@ -14,10 +14,6 @@ BUILD_BROKEN_DUP_RULES := true
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
-# FOD
-TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.toco
-TARGET_USES_FOD_ZPOS := true
-
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 
