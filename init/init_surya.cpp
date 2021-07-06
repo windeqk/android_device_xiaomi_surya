@@ -81,6 +81,7 @@ void set_device_props(const std::string fingerprint, const std::string descripti
 
 void load_device_properties() {
     std::string hwname = GetProperty("ro.boot.hwname", "");
+    std::string hwversion = GetProperty("ro.boot.hwversion", "");
 
     if (hwname == "surya") {
         set_device_props("POCO/surya_global/surya:11/RKQ1.200826.002/V12.0.1.0.RJGMIXM:user/release-keys",
@@ -91,6 +92,9 @@ void load_device_properties() {
                          "surya_in-user 11 RKQ1.200826.002 V12.0.1.0.RJGINXM release-keys",
                          "karna", "POCO X3", "surya_in_global");
     }
+
+    property_override("vendor.boot.hwversion", hwversion.c_str());
+    property_override("ro.boot.product.hardware.sku", hwname.c_str());
 }
 
 void load_dalvik_properties() {
