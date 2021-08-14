@@ -113,13 +113,11 @@ KERNEL_LD := LD=ld.lld
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1
-TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM_IAS=1
+TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 
 TARGET_KERNEL_APPEND_DTB := false
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r416183b1
-TARGET_KERNEL_CONFIG := surya_defconfig
+TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x880000
