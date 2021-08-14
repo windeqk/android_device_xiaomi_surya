@@ -314,6 +314,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     libqti-perfd-client
 
+# Poco Parts
+$(call inherit-product-if-exists, vendor/PocoParts/pocoparts.mk)
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
