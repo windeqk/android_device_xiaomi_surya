@@ -583,5 +583,6 @@
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
     
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
-    <integer name="config_screenRecorderMaxFramerate">90</integer>
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
+
 </resources>
