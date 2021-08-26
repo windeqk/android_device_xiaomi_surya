@@ -9,6 +9,7 @@ ro.charger.enable_suspend=true
 
 # Display
 persist.lcd.cabc_mode=1
+persist.lcd.hbm_mode=0
 
 # Media
 media.aac_51_output_enabled=true
