@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 # Inherit some common ShapeShiftOS stuff.
 $(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 
+# Built gapps
+$(call inherit-product, vendor/gapps/Android.mk)
+
 PRODUCT_NAME := ssos_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
