@@ -1,0 +1,24 @@
+[
+  {
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "clone-depth": "1",
+    "target_path": "hardware/xiaomi",
+    "branch": "lineage-18.1"
+  },
+  {
+    "repository": "Stratosphere-Kernel/android_kernel_xiaomi_surya",
+    "clone-depth": "1",
+    "target_path": "kernel/xiaomi/surya"
+    "branch": "staging/LA.UM.9.x"
+  },
+  {
+    "repository": "ArrowOS-Devices/android_prebuilts_clang_host_linux-x86_clang-r437112",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-r437112"
+  },
+  {
+    "repository": "ProjectStreak-Devices/vendor_xiaomi_surya",
+    "clone-depth": "1",
+    "target_path": "vendor/xiaomi/surya",
+    "branch": "twelve"
+  }
+]
